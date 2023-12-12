@@ -27,11 +27,11 @@
         -->
         <main class="forms">
             <h2>Log into Account</h2>
-            <form action="" method="post" >
+            <form method="post" id="login" onsubmit="loginFunc()" >
 
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="game@mail.com" required>
+                    <input type="username" id="username" name="email" placeholder="mahmud0417" required>
                 </div>
                 
                 <div class="form-group">
@@ -49,6 +49,8 @@
         <footer>
             <p>&copy; 2023 Your Memory Game</p>
         </footer>
+
+        <script src="../js/authentication.js"></script>
 
 </body>
 </html>
