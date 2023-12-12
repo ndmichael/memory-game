@@ -15,16 +15,18 @@ function cardShuffle(){
 cardShuffle();
 
 var count = 0;
+let scores = 0;
 
+// logic to handle trials counter
 function counter(count=0){
     const trials = document.querySelector('.trials');
-    console.log(trials)
     trials.innerHTML = count;
 }
 
-function scores(){
-    let scores = 0;
-    scores++;
+// logic for handling scores
+function scoreCount(scores=0){  
+    const scoresEle = document.querySelector('.scores');
+    scoresEle.innerHTML = scores;
 
 }
 
@@ -45,8 +47,9 @@ flipCard = function(e){
     else{
         // hasFlippedCard = false;
         secondCard = this;
-        count++;
         
+        // count increment and counter call
+        count++;
         counter(count);
         
         // if its a match
@@ -54,6 +57,8 @@ flipCard = function(e){
             firstCard.removeEventListener('click', flipCard);
             secondCard.removeEventListener('click', flipCard);
             resetBoard();
+            scores++;
+            scoreCount(scores);
         }
         // else if its not a match
         // DELAY 1 seconds before flipping back
