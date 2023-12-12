@@ -1,0 +1,91 @@
+/* Reset default styles and set some basic styling */
+
+/*
+    * universal css
+*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+    * body generic css
+*/
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.memory-game{
+    margin: auto;
+    border: 2px solid lime;
+    width: 960px;
+    height: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memoryCard{
+    border: 2px solid lightcyan;
+    height: calc(33.333% - 10px);
+    width: calc(25% - 10px);
+    position: relative;
+    margin: auto;
+    border-radius: 15px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.memoryCard:active{
+    transform: scale(.95);
+    transition: transform .3s ease-in-out;
+}
+
+.memoryCard.flip{
+    transform: rotateY(180deg);
+}
+
+img{
+    /* height: 700px;
+    width: 300px; */
+    object-fit: contain;
+    object-position: center;
+}
+
+.front,
+ .back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid rgb(161, 165, 145);
+    padding: 20px;
+    border-radius: 15px;
+    backface-visibility: hidden !important;
+}
+
+.front{
+    transform: rotateY(180deg);
+}
+
+
+
+/**
+**  styling for css
+**/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+} 
+
+

@@ -1,0 +1,70 @@
+/**
+    * styling for forms (sign up, sign in)
+**/
+.forms{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+.forms form{
+    width: 50%;
+}
+
+.forms h2{
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    width: 100%;
+}
+
+
+/*
+    * styling for form label and input
+*/
+.form-group label{
+    font-size: 16px;
+    padding-bottom: 5px;
+    color: rgb(54, 54, 54);
+}
+
+.form-group input{
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 100%;
+    border: 0;
+    box-shadow: 0 0 5px rgb(08,08,08,0.2);
+    border-radius: 5px;
+}
+
+
+/*
+    *  styling for form button
+*/
+.forms button{
+    display: inline-block;
+    background: darkblue;
+    padding: 10px 20px;
+    color: aliceblue;
+    font-size: 14px;
+    border: 0;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    width: 150px;
+    border-radius: 5px;
+    margin-left: 7px;
+    margin-top: 10px;
+    transition: .3s ease-in;
+}
+
+.forms button:hover{
+    background: navy;
+}
