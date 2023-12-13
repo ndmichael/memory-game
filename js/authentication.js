@@ -35,17 +35,26 @@ function registration(e){
 
 }
 
+/*
+    ** logic for login
+    ** loop through users in localStorage
+    ** filter and return if login username and password matched
+*/
 function loginFunc(){
     let username = document.querySelector('#username').value;
     let password = document.querySelector('#password').value;
     let users = JSON.parse(localStorage.getItem('users'));
 
     let result = users.filter(user =>{
+
         return user.username === username && user.password == password;
 
     })
-
+    console.log(result)
     if(result){
+        // get the data and store in loggedIn in localStorage
+        const data = {fullname:result[0].fullname, username: result[0].username, status: true}
+        localStorage.setItem('loggedIn', JSON.stringify(data))
         alert("Youare now log in");
         window.location.href = "../index.html";
     }
