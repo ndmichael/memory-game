@@ -30,6 +30,26 @@ function scoreCount(scores=0){
 
 }
 
+// reset game and store user infomation, trials and scores
+const resetGame = function(score, trials){
+    let recordBoards = JSON.parse(localStorage.getItem("records") || "[]");
+    let loggedIn = JSON.parse(localStorage.getItem("loggedIn"))
+    console.log(loggedIn.fullname)
+
+    recordBoards.push({fullname:loggedIn.fullname, username:loggedIn.username, score, trials})
+    // console.log({recordBoards})
+
+    if(loggedIn){
+        localStorage.setItem('records', JSON.stringify(recordBoards));
+        alert("Record stored in local storage. \n Game would be reset for new records")
+        window.location.href = "/"
+    }
+    [count, scores] = [0,0];
+    
+
+}
+// resetGame(scores, count)
+
 flipCard = function(e){
     // lock board until unmatched card flipped back
     // this solve the bug of card flipping.
@@ -59,6 +79,9 @@ flipCard = function(e){
             resetBoard();
             scores++;
             scoreCount(scores);
+            if (parseInt(scores) == 6){
+                resetGame(scores, count)
+            }
         }
         // else if its not a match
         // DELAY 1 seconds before flipping back
@@ -75,6 +98,7 @@ flipCard = function(e){
     }
 }
 
+// resetBoard to minimize bugs on close before card flip
 let resetBoard =  function(){
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
