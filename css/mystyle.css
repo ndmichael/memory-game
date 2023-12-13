@@ -33,7 +33,7 @@ header h1 {
 
 
 /*
-    * styling for navigation
+    ** styling for navigation
 */
 .navbar{
     background: darkblue;
@@ -118,6 +118,44 @@ img{
 
 .front{
     transform: rotateY(180deg);
+}
+
+
+/**
+**  css for leadership board
+**/
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    color: #ffffff;
+}
+
+.h1{
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: navy;
+    font-weight: bold;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(64, 64, 139);
+}
+
+tr:nth-child(even) {
+    background-color: navy;
+}
+
+tr:hover {
+    background-color: #5e4984;
 }
 
 
