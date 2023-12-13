@@ -48,7 +48,6 @@ const resetGame = function(score, trials){
     
 
 }
-// resetGame(scores, count)
 
 flipCard = function(e){
     // lock board until unmatched card flipped back
@@ -109,6 +108,4 @@ let resetBoard =  function(){
     * generate random numbers for card positions
     * assign to flex which auto shuffle order
 */
-
-
 cards.forEach(card => card.addEventListener('click', flipCard))
