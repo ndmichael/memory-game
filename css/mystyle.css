@@ -11,6 +11,53 @@
 
 
 /*
+    * css for the header
+*/
+header {
+    background-color: gold;
+    color: darkblue;
+    text-align: center;
+    padding: 10px;
+}
+
+header a{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+
+/*
+    * styling for navigation
+*/
+.navbar{
+    background: darkblue;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05rem;
+}
+
+
+/*
     * body generic css
 */
 body {
