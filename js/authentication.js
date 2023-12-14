@@ -1,7 +1,6 @@
 let regForm = document.getElementById("register");
 let loginForm = document.getElementById("login");
 
-console.log(loginForm)
 
 function submitForm(e){
     e.preventDefault();
@@ -61,7 +60,19 @@ function loginFunc(){
     else{
         alert("You are not logged In");
     }
-    
-
-
 }
+
+/*
+    ** function to display userlogged in 
+    ** linked to the URL using javascript
+*/
+function LoggedInUser(){
+    const link = document.getElementById('loggedInAs');
+    const user = JSON.parse(localStorage.getItem('loggedIn'));
+
+    if(user){
+        link.innerHTML = `loggedIn as: ${user.username}`;
+    }
+}
+// function call
+LoggedInUser();
