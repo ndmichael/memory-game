@@ -66,6 +66,19 @@ function loginFunc(){
     ** function to display userlogged in 
     ** linked to the URL using javascript
 */
+function logOut(){
+    const user = JSON.parse(localStorage.getItem('loggedIn'));
+    if(user){
+        alert("You will be logged out");
+        localStorage.removeItem("loggedIn");
+        window.location.href = "./pages/login.html";
+    }
+}
+
+/*
+    ** function to display userlogged in 
+    ** linked to the URL using javascript
+*/
 function LoggedInUser(){
     const link = document.getElementById('loggedInAs');
     const user = JSON.parse(localStorage.getItem('loggedIn'));
