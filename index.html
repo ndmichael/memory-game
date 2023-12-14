@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/mystyle.css">
     <title>Memory Game</title>
+    <script>
+        /*
+            ** scripts to redirect user if not logged In
+            ** it uses the login details stored in the localStorage
+        */
+        const status = JSON.parse(localStorage.getItem('loggedIn'));
+        if(status === null){
+            alert("Log in first to play game");
+            window.location.href = "./pages/login.html";
+        }
+    </script>
 </head>
 <body>
     <!-- 
@@ -19,6 +30,7 @@
         <ul class="navbar">
             <li><a href="./pages/signup.html">Sign Up</a></li>
             <li><a href="./pages/login.html">Login</a></li>
+            <!-- <li><a href="../pages/help.html" style="color: red; font-size:14px">Logout</a></li> -->
             <li><a href="./pages/leaderboard.html">Leaderboard</a></li>
             <li><a href="/">Play Game</a></li>
             <li><a href="./pages/help.html">Help</a></li>
